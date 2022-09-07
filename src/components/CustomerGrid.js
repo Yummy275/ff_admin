@@ -2,7 +2,7 @@ import React from 'react';
 
 export const CustomerGrid = ({ customers }) => {
     return (
-        <table className="table">
+        <table className="table table-hover fs-5">
             <thead>
                 <tr>
                     <th scope="col">First</th>

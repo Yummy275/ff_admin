@@ -4,7 +4,7 @@ import { styles } from '../../helpers/styles';
 export const LoginForm = ({ handleSubmit, updateInputs }) => {
     return (
         <form onSubmit={(e) => handleSubmit(e)}>
-            <div className="d-flex flex-column gap-2">
+            <div className="d-flex flex-column gap-2 mt-2">
                 <input
                     placeholder="Username"
                     className="form-control"
@@ -19,9 +19,7 @@ export const LoginForm = ({ handleSubmit, updateInputs }) => {
                     onChange={(e) => updateInputs(e)}
                 />
             </div>
-            <div className="d-flex justify-content-end mt-3">
-                <button className={styles.button}>Login</button>
-            </div>
+            <button className={styles.button + ' w-100 mt-3'}>Login</button>
         </form>
     );
 };

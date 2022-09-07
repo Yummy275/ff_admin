@@ -1,6 +1,9 @@
+const baseUrl = process.env.REACT_APP_API_URL;
+
 const urls = {
-    login: `${process.env.REACT_APP_API_URL}/user/login`,
-    createNewCustomer: `${process.env.REACT_APP_API_URL}/customer/create`,
+    login: `${baseUrl}/user/login`,
+    createNewCustomer: `${baseUrl}/customer/create`,
+    getCustomers: `${baseUrl}/customer/get-list`,
 };
 
 export const login = async (userInputs) => {
@@ -27,4 +30,15 @@ export const queryCreateCustomer = async (customerData) => {
     });
     const reqJson = await createReq.json();
     return reqJson;
+};
+
+export const getCustomers = async () => {
+    const customersReq = await fetch(urls.getCustomers, {
+        credentials: 'include',
+    });
+    const customers = await customersReq.json();
+    if (customers.error) {
+        return console.log(customersReq);
+    }
+    return customers;
 };

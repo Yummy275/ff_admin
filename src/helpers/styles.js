@@ -1,3 +1,3 @@
 export const styles = {
-    button: 'btn btn-outline-primary',
+    button: 'btn btn-outline-dark',
 };
