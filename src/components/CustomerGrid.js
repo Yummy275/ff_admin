@@ -15,7 +15,7 @@ export const CustomerGrid = ({ customers }) => {
             <tbody>
                 {customers.map((customer) => {
                     return (
-                        <tr>
+                        <tr role="button">
                             <td>{customer.firstName}</td>
                             <td>{customer.lastName}</td>
                             <td>{customer.phone}</td>
